@@ -1,14 +1,16 @@
 ﻿@page
 @model RazorPagesMovie.Pages.Movies.IndexModel
 
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+
+<h1 id="Title">Movies Search</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a class="btn btn-success" asp-page="Create">Create New</a>
 </p>
 
 <form>
@@ -17,7 +19,8 @@
             <option value="">All</option>
         </select>
         Title: <input type="text" asp-for="SearchString" />
-        <input type="submit" value="Filter" />
+        <input class="btn btn-primary" type="submit" value="Filter" />
+        <a class="btn btn-danger" type="button" value="Reset" asp-page="/Movies/Index" >Reset</a>
     </p>
 </form>
 
@@ -63,7 +66,7 @@
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="Delete" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

@@ -1,6 +1,6 @@
 html {
   font-size: 14px;
-  background-color: black
+  background-color: black;
 }
 
 @media (min-width: 768px) {
@@ -14,10 +14,45 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+}
+
+#privacy {
+    color:aliceblue;
+}
+
+#privacy:hover {
+    color:blue;
 }
 
 body {
   margin-bottom: 60px;
+  background-color: aliceblue;
+}
+
+nav a {
+    font-weight: 700;
+}
+
+body a {
+    color: black;
+    text-decoration: none;
+    text-underline-offset: unset;
+}
+
+
+.Delete {
+    color: red;
+    border: thin solid transparent;
+    padding-right: 4px;
+    padding-left: 4px;
+    transition:all ease-in-out 250ms;
+}
+
+.Delete:hover {
+    border: thin solid red;
+    background-color: red;
+    color: aliceblue;
+    border-radius: 3px;
 }
